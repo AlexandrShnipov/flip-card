@@ -1,0 +1,40 @@
+.inner {
+    perspective: 1000;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    margin: auto;
+    width: 20rem;
+    height: 30rem;
+    background-color: rgb(212, 190, 190);
+    text-align: center;
+    transition: all 1s;
+    transform-style: preserve-3d;
+}
+
+
+
+.front {
+    font-size: 10rem;
+}
+
+.back {
+    font-size: 5rem;
+    /* background-color: rgb(219, 34, 34); */
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+}
+
+.card:hover {
+    transform: rotateY(180deg) rotateZ(90deg);
+}
+
+.back {
+    transform: rotateY(180deg) rotateZ(90deg);
+}
